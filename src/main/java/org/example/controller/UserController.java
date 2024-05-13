@@ -4,7 +4,7 @@ import org.example.entity.NewUser;
 import org.example.entity.Role;
 import org.example.entity.User;
 import org.example.request.LoginRequest;
-import org.example.service.UserService;
+import org.example.service.impl.UserServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -16,7 +16,7 @@ import java.util.List;
 @RestController
 public class UserController {
     @Autowired
-    private UserService userService;
+    private UserServiceImpl userService;
 
     // По умолчанию создаётся роль студента, т.к обладает наименьшими правами
     @PostMapping("/registration")

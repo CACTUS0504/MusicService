@@ -40,7 +40,7 @@ public class WebSecurityConfig {
                 .requestMatchers("/login" , "/registration")
                 .permitAll()
                 .anyRequest()
-                .authenticated()
+                .permitAll()
 
                 .and()
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
