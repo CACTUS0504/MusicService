@@ -31,4 +31,11 @@ public class Artist {
             inverseJoinColumns = @JoinColumn(name = "audio_id", referencedColumnName = "id"))
     @JsonIgnore
     private List<Audio> audios;
+
+    @ManyToMany(cascade = CascadeType.ALL)
+    @JoinTable(name = "artist_album",
+            joinColumns = @JoinColumn(name = "artist_id", referencedColumnName = "id"),
+            inverseJoinColumns = @JoinColumn(name = "album_id", referencedColumnName = "id"))
+    @JsonIgnore
+    private List<Album> albums;
 }

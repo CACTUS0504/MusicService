@@ -28,4 +28,8 @@ public class Album {
     @OneToMany(mappedBy = "album")
     @JsonIgnore
     private List<Audio> audios;
+
+    @ManyToMany(mappedBy = "albums")
+    @JsonIgnore
+    private List<Artist> artists;
 }

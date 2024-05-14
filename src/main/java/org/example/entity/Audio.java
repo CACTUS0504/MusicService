@@ -25,9 +25,6 @@ public class Audio {
     @Column(name = "music_file_URL")
     private String musicFileURL;
 
-    @Column(name = "image_file_URL")
-    private String imageFileURL;
-
     @ManyToMany(mappedBy = "audios")
     @JsonIgnore
     private List<User> users;

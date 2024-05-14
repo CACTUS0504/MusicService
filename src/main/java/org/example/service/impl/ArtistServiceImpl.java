@@ -34,7 +34,6 @@ public class ArtistServiceImpl implements ArtistService {
         Artist artist = new Artist();
 
         String key = generateKey(file.getName());
-        System.out.println(key);
         Path path = Paths.get("src/main/resources/static/img", key);
         Path fullPath = Files.createFile(path);
 

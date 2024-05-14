@@ -51,7 +51,8 @@ public class ArtistController {
     }
 
     @DeleteMapping()
-    public void deleteArtist(@RequestParam String name) throws IOException{
+    public ResponseEntity deleteArtist(@RequestParam String name) throws IOException{
         artistService.deleteArtist(name);
+        return ResponseEntity.ok().body("Artist deleted");
     }
 }
